@@ -11,11 +11,11 @@
 字字字<br>
 字字字<br>
 ##字体
-**粗体**
-*斜体*
-***粗斜体***
-~~删除线~~
-凸显`关键字`
+**粗体**<br>
+*斜体*<br>
+***粗斜体***<br>
+~~删除线~~<br>
+凸显`关键字`<br>
 
 ---------------
 
@@ -24,7 +24,39 @@
 --|:--:|--:|
 |1|赫连|痛|
 
+* 1
+* 2
+ * 3
+
+
 
 ##超链接
-[比利比利♂](https://www.bilibili.com"van♂游戏")
+[比利比利♂](https://www.bilibili.com "van♂游戏")
+
+##插入代码片段
+```c
+	#include<stdio>
+	int main(){
+
+		printf("testing\n");
+		return 0;
+	}
+
+```
+```cpp
+	#include<iostream>
+	int main(){
+		return 0;
+	}
+```
+```python
+```
+```java
+```
+```bash
+	netstate -apn |grep "8080"
+	echo "123" > test.txt
+```
+
+
 
