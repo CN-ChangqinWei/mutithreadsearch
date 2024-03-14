@@ -6,266 +6,838 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>922</width>
-    <height>640</height>
+    <width>920</width>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTabWidget" name="tabWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>901</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <property name="currentIndex">
-    <number>0</number>
-   </property>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>速度环</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_2">
-    <attribute name="title">
-     <string>角度环</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_3">
-    <attribute name="title">
-     <string>角速度环</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_4">
-    <attribute name="title">
-     <string>舵机</string>
-    </attribute>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>11</y>
-     <width>911</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>编码器</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEENCODER">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>欧拉角</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEEULUR">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Gyro_X</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEGYROX">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>误差</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEERROR">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PB_RUNMOTOR">
+           <property name="text">
+            <string>启动</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>速度环输出</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUESPEEDOUT">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>角度环输出</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEANGLEOUT">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>角速度环输出</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUEANGLEOUT_2">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>舵机输出</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LB_VALUESERVOOUT">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="text">
+            <string>显示</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PB_STOPMOTOR">
+           <property name="text">
+            <string> 急停</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>参数调节</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>401</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QPushButton" name="PB_SPEEDRING">
           <property name="text">
-           <string>编码器</string>
+           <string> 速度环</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QPushButton" name="PB_ANGLERING">
           <property name="text">
-           <string>0</string>
+           <string>角度环</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="PB_GYRORING">
           <property name="text">
-           <string>显示</string>
+           <string> 角速度环</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="PB_SERVORING">
+          <property name="text">
+           <string>舵机</string>
           </property>
          </widget>
         </item>
        </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>欧拉角</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>Gyro_X</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_3">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <widget class="QLabel" name="label_9">
-          <property name="text">
-           <string>误差</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_10">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_5">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_6">
-        <item>
-         <widget class="QLabel" name="label_11">
-          <property name="text">
-           <string>速度环输出</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_12">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_6">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_7">
-        <item>
-         <widget class="QLabel" name="label_13">
-          <property name="text">
-           <string>角度环输出</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_14">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_7">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <widget class="QLabel" name="label_15">
-          <property name="text">
-           <string>角速度环输出</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_16">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_8">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <item>
-         <widget class="QLabel" name="label_17">
-          <property name="text">
-           <string>舵机输出</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_18">
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_9">
-          <property name="text">
-           <string>显示</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>881</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="PB_SETKD">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>160</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_REDUCEKI">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>120</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_KP">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_KD">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_SETKP">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>20</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_KP">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>20</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_REDUCEKP">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>50</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_POLEKD">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>160</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 正</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>KP</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_POLEKP">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>20</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 正</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_PLUSKI">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_PLUSKD">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>160</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>KI</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_SETKI">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>90</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_POLEKI">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>90</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 正</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_KI">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>90</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_REDUCEKD">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>190</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>160</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>KD</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_PLUSKP">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>20</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_KI">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>90</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_KD">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>160</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_TARGET">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>230</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_SETTARGET">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>230</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_TARGET">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>230</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>230</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>目标</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_PLUSTARGET">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>230</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_POLETARGET">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>230</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 正</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_REDUCETARGET">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>260</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string> 控制台</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="PB_BACK">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>180</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 后退</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_FRONT">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 前进</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_LEFT">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>  左转</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_STOP">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>100</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>停止</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PB_RIGHT">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>100</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 右转</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_CONTROLSPEED">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>50</y>
+          <width>81</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QSlider" name="SD_CONTROLSERVO">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>50</y>
+          <width>71</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>220</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 速度</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>220</y>
+          <width>72</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>舵机</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_CONTROLSPEED">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>0</y>
+          <width>51</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LE_CONTROLSERVO">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>0</y>
+          <width>51</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

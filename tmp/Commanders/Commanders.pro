@@ -28,7 +28,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    Serial/Serialer.cpp \
     Kernel.cpp \
     BlueTooth/BlueTooth.cpp \
     bluetoothitem.cpp \
@@ -38,13 +37,13 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    Serial/Serialer.h \
     config.h \
     Kernel.h \
     BlueTooth/BlueTooth.h \
     bluetoothitem.h \
     vmotorcontroler.h \
-    poleslider.h
+    poleslider.h \
+    config.h
 
 
 FORMS += \

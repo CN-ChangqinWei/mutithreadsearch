@@ -116,3 +116,10 @@ void CKernel::BLTRecv(QByteArray content){
 
 }
 
+void CKernel::SendCommand(VMotorMsg command){
+
+
+    char* data=(char*)&command;
+    m_pBLT->BLTSend(data,sizeof(command));
+
+}

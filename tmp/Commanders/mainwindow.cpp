@@ -53,6 +53,10 @@ void MainWindow::init(){
 
     ui->WG_BLUEDEV->setLayout(m_pBlueToothLayoutPair);
 
+    m_VMControler=new VMotorControler(this,m_pKer);
+
+    m_VMControler->hide();
+
     //m_pBlueToothLayout->addWidget(new BlueToothItem(QString("1"),QString("1")));
 }
 
@@ -288,4 +292,9 @@ void MainWindow::BLTRecv(QByteArray content){
     }
     ui->TB_BLTRECV->insertPlainText(text);
 
+}
+
+void MainWindow::on_PB_OPENVMOTOR_clicked()
+{
+    m_VMControler->show();
 }

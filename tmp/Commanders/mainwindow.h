@@ -2,9 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include"Serial/Serialer.h"
+//#include"Serial/Serialer.h"
 #include"bluetoothitem.h"
 #include"BlueTooth/BlueTooth.h"
+#include"vmotorcontroler.h"
 #include<list>
 
 class CKernel;
@@ -54,6 +55,8 @@ private slots:
 
     void on_CB_BLTAPPEND_currentTextChanged(const QString &arg1);
 
+    void on_PB_OPENVMOTOR_clicked();
+
 private:
     Ui::MainWindow *ui;
     QLayout* m_pBlueToothLayout;
@@ -61,9 +64,11 @@ private:
     list<BlueToothItem*> m_lstBLTitems;
     list<BlueToothItem*> m_lstBLTitemsPair;
     CKernel* m_pKer;
+    VMotorControler* m_VMControler;
     QString m_SendMode;
     QString m_RecvMode;
     QString m_AppendMode;
+
 
 };
 

@@ -6,6 +6,7 @@
 #include<QtBluetooth/QBluetoothSocket>
 #include<QtBluetooth/QBluetoothAddress>
 #include<map>
+#include"config.h"
 using namespace std;
 class CKernel;
 class CBlueTooth:public QObject{
@@ -26,6 +27,7 @@ public:
     void FinishSearch();
     void StartSearch();
     void SendData(QString data);
+    void BLTSend(char* data,int length);
     void BLTSend(QString text);
     void BLTRecv();
 
@@ -44,5 +46,6 @@ private:
     QBluetoothDeviceInfo m_pAimDev;
     CKernel* m_pKer;
     QBluetoothSocket* m_pSock;
+
     //bool m_fConnectWait;
 };

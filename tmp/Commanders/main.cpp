@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include"Serial/Serialer.h"
+//#include"Serial/Serialer.h"
 #include"Kernel.h"
 int main(int argc, char *argv[])
 {

@@ -156,8 +156,36 @@ void CBlueTooth::slot_BLTRecv(){
 
 void CBlueTooth::BLTRecv(){
     QByteArray data=m_pSock->readAll();
-    m_pKer->BLTRecv(data);
+    //m_pKer->BLTRecv(data);
 }
+
+void CBlueTooth::BLTSend(char* data,int length){
+
+    if(m_isConnect){
+        char* buf=new char[length];
+        for(int i=3;i>=0;i--){
+
+            buf[3-i]=data[i];
+
+        }
+        for(int i=3;i>=0;i--){
+
+
+            buf[4+i]=data[4+i];
+
+        }
+        if(m_pSock->isOpen()&&m_pSock->isWritable())
+         m_pSock->write(buf,length);
+        else{
+            m_pKer->MsgBox("消息","Socket未打开");
+
+        }
+        delete[] buf;
+    }
+    //m_pSock->write(data,length);
+
+}
+
 
 bool CBlueTooth::m_isConnect;
 
